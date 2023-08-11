@@ -51,8 +51,13 @@ const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
 export default function App() {
+  // const KEY = "b595b3b4";
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
+
+  // fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${KEY}`)
+  //   .then((res) => res.json())
+  //   .then((data) => console.log(data));
 
   return (
     <>
@@ -86,7 +91,7 @@ function Logo() {
   return (
     <div className="logo">
       <span role="img">🍿</span>
-      <h1>usePopcorn</h1>
+      <h1>Metflixer</h1>
     </div>
   );
 }
